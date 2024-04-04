@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: #e882e8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/*---------------Body---------------*/
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: url(./images/bg-desktop.svg), var(--Violet);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+}
+/*---------------Container---------------*/
+.container {
+  width: 89vw;
+}
+/*---------------Header---------------*/
+header {
+  padding: 64px 0;
+}
+header img {
+  width: 34%;
+}
+
+/*---------------Main---------------*/
+.main {
+  display: flex;
+
+  gap: 56px;
+  margin-bottom: 30px;
+}
+.main__mockups {
+  width: 55%;
+}
+
+.main__information {
+  width: 45%;
+}
+.main__title {
+  margin-top: 45px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: white;
+}
+.main__details {
+  margin-top: 25px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+.main__register {
+  display: inline-block;
+
+  padding: 16px 66px;
+  border-radius: 50px;
+  margin-top: 40px;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: var(--Violet);
+
+  background-color: white;
+}
+
+/*---------------Footer---------------*/
+footer {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(119deg)
+    brightness(109%) contrast(101%);
+}
+.icons:hover {
+  cursor: pointer;
+  filter: invert(79%) sepia(38%) saturate(2283%) hue-rotate(237deg)
+    brightness(93%) contrast(95%);
+}
+
+.facebook {
+  background: url(./images/facebook.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+}
+.twitter {
+  background: url(./images/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+}
+.instagram {
+  background: url(./images/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+}
+
+@media screen and (max-width: 1230px) {
+  body {
+    background: url(./images/bg-mobile.svg), var(--Violet);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  header {
+    padding: 24px 0 36px 0;
+  }
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main__mockups {
+    width: 100%;
+  }
+  .main__mockups img {
+    width: 100%;
+  }
+  .main__information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    justify-content: center;
+  }
+}
